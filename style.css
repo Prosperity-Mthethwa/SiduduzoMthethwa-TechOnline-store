@@ -9,11 +9,11 @@ header,
 footer {
     background-color: rgb(111, 136, 136);
     color: #fff;
-    width: 100%
+    width: 100%;
 }
 
 footer {
-    position: absolute;
+    position: sticky;
     bottom: 100;
     text-align: center;
     font-size: 12px;
@@ -55,13 +55,16 @@ h1 {
 
 .card {
     flex-direction: row;
-    max-width: 20em;
+    flex: 1;
+    display: block;
+    min-width: 200px;
+    height: fit-content;
+    justify-content: space-around;
     width: 100%;
+    position: relative;
+    padding: 10%;
     background-color: #f0f0f0;
     border-radius: 18px;
-    padding: 0.5em;
-    overflow: hidden;
-    flex-wrap: wrap;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
     margin: 18px;
     transition: .45s;
@@ -108,4 +111,20 @@ h1 {
 
 .card-content .btnn:hover {
     background-color: #08726c;
+}
+
+
+
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 calc(50% - 16px);
+        /* 2 boxes per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        flex: 1 1 100%;
+        /* Full width on very small screens */
+    }
 }
