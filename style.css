@@ -68,7 +68,6 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
-    height: fit-content;
     justify-content: space-between;
     width: 100%;
     position: relative;
