@@ -49,6 +49,60 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
+/* Custom styles for the carousel */
+.carousel-item {
+    display: none;
+    /* Hide all items by default */
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item.active {
+    display: block;
+    /* Show active item */
+}
+
+/* Ensure video fills its container and maintains aspect ratio */
+.carousel-item video {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    /* Limit max height for better viewing */
+    object-fit: fill;
+    /* Ensure video fits without cropping */
+}
+
+/* Ensure images fill their container and maintain aspect ratio */
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    /* Limit max height for better viewing */
+    object-fit: contain;
+    /* Ensure image fits without cropping */
+}
+
+/* Style for the navigation arrows */
+.carousel-arrow {
+    @apply absolute top-1/2 -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white p-3 rounded-full cursor-pointer hover:bg-opacity-75 transition-all duration-300;
+}
+
+.carousel-arrow.left {
+    left: 1rem;
+}
+
+.carousel-arrow.right {
+    right: 1rem;
+}
+
+/* Style for the dot indicators */
+.dot-indicator {
+    @apply w-3 h-3 bg-gray-400 rounded-full cursor-pointer mx-1 hover:bg-gray-600 transition-colors duration-300;
+}
+
+.dot-indicator.active {
+    @apply bg-blue-600;
+}
+
 /* Main Content Sections */
 .page-section {
     padding: 60px 20px;
@@ -85,7 +139,7 @@ nav ul li a:hover {
     /* Set a fixed width */
     height: 200px;
     /* Set a fixed height */
-    object-fit: cover;
+    object-fit: fill;
     /* Crop image to cover the area without distortion */
     display: block;
     /* Ensures images are treated as block-level elements */

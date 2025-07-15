@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smooth Scroll & Responsive Page</title>
+    <title>TechTrove Smart Accessories</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -12,27 +12,67 @@
     <header>
         <nav>
             <ul>
-                <li><a href="#section1">Section 1</a></li>
-                <li><a href="#section2">Section 2</a></li>
-                <li><a href="#section3">Section 3</a></li>
-                <li><a href="#section4">Section 4</a></li>
+                <li><a href="#section1">Accessories Line-Up</a></li>
+                <li><a href="#section2">Car Accesories</a></li>
+                <li><a href="#section3">Chargers</a></li>
+                <li><a href="#section4">About Us</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="section1" class="page-section">
-            <h1>Welcome to Section 1</h1>
-            <p>This is the first section of our responsive and smooth-scrolling webpage. Scroll down to see more!</p>
-            <img src="images/vecteezy_electrical-adapter-smartphone-usb-port-charger-wire-on-gray_4800749.JPG"
-                alt="Description of image one">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat.</p>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-                laborum.</p>
-        </section>
+        <div class="carousel-container relative w-full max-w-4xl bg-white shadow-lg rounded-lg overflow-hidden">
+            <!-- Carousel Items -->
+            <div class="carousel-inner relative">
+                <!-- Image 1 -->
+                <div class="carousel-item active">
+                    <img src="https://placehold.co/800x500/FF5733/FFFFFF?text=Image+1" alt="Placeholder Image 1"
+                        class="rounded-lg">
+                </div>
+                <!-- Image 2 -->
+                <div class="carousel-item">
+                    <img src="https://placehold.co/800x500/33FF57/FFFFFF?text=Image+2" alt="Placeholder Image 2"
+                        class="rounded-lg">
+                </div>
+                <!-- Image 3 -->
+                <div class="carousel-item">
+                    <img src="https://placehold.co/800x500/5733FF/FFFFFF?text=Image+3" alt="Placeholder Image 3"
+                        class="rounded-lg">
+                </div>
+                <!-- Video -->
+                <div class="carousel-item">
+                    <!-- Replace with your video source. Using a dummy video for demonstration. -->
+                    <!-- Ensure the video is muted and plays inline for better user experience on autoplay -->
+                    <video controls muted playsinline class="rounded-lg">
+                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+
+            <!-- Navigation Arrows -->
+            <button class="carousel-arrow left" aria-label="Previous slide">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                    </path>
+                </svg>
+            </button>
+            <button class="carousel-arrow right" aria-label="Next slide">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </button>
+
+            <!-- Dot Indicators -->
+            <div class="carousel-dots flex justify-center p-4">
+                <span class="dot-indicator active" data-slide-to="0"></span>
+                <span class="dot-indicator" data-slide-to="1"></span>
+                <span class="dot-indicator" data-slide-to="2"></span>
+                <span class="dot-indicator" data-slide-to="3"></span>
+            </div>
+        </div>
 
         <section id="section2" class="page-section">
             <h1>Discover Section 2</h1>
