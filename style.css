@@ -21,6 +21,12 @@ header {
     /* Ensures header is above other content */
 }
 
+h2 {
+    text-align: left;
+    font-size: 40px;
+    position: sticky;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
@@ -53,7 +59,7 @@ nav ul li a:hover {
 .carousel-item {
     display: none;
     /* Hide all items by default */
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.85s ease-in-out;
 }
 
 .carousel-item.active {
@@ -67,7 +73,7 @@ nav ul li a:hover {
     height: auto;
     max-height: 500px;
     /* Limit max height for better viewing */
-    object-fit: fill;
+    object-fit: contain;
     /* Ensure video fits without cropping */
 }
 
@@ -75,9 +81,9 @@ nav ul li a:hover {
 .carousel-item img {
     width: 100%;
     height: auto;
-    max-height: 500px;
+    max-height: 650px;
     /* Limit max height for better viewing */
-    object-fit: contain;
+    object-fit: inherit;
     /* Ensure image fits without cropping */
 }
 
